@@ -1,14 +1,14 @@
 package com.unisinos.ubiquitouscomputingtgb;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity implements
 
     private GoogleApiClient mGoogleApiClient;
     private Location mLocation;
-    private LocationManager mLocationManager;
-    private LocationRequest mLocationRequest;
     private String mLatitude;
     private String mLongitude;
 
@@ -48,24 +46,37 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     public void getLocationAndShowOfferList(View view) {
+
         Intent intent = new Intent(this, DisplayOffersActivity.class);
-        intent.putExtra(LATITUDE, mLatitude);
-        intent.putExtra(LONGITUDE, mLongitude);
-        startActivity(intent);
+
+        if(canAccessLocation()) {
+            mLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+
+            if (mLocation != null) {
+                mLatitude = String.valueOf(mLocation.getLatitude());
+                mLongitude = String.valueOf(mLocation.getLongitude());
+            }
+
+            intent.putExtra(LATITUDE, mLatitude);
+            intent.putExtra(LONGITUDE, mLongitude);
+
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "No permission granted to get location", Toast.LENGTH_LONG);
+        }
+
+
     }
 
     @Override
     public void onConnected(Bundle bundle) {
-        if(PackageManager.PERMISSION_GRANTED == checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION)) {
+        if(!canAccessLocation()) {
             requestPermissions(LOCATION_PERMS, LOCATION_REQUEST);
         }
+    }
 
-        mLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-
-        if (mLocation != null) {
-            mLatitude = String.valueOf(mLocation.getLatitude());
-            mLongitude = String.valueOf(mLocation.getLongitude());
-        }
+    private boolean canAccessLocation() {
+        return PackageManager.PERMISSION_GRANTED == checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION);
     }
 
     @Override

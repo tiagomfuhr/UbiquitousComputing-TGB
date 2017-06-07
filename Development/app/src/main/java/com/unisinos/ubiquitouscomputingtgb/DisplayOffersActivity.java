@@ -20,7 +20,7 @@ public class DisplayOffersActivity extends AppCompatActivity {
         // Capture the layout's TextView and set the string as its text
         TextView textLatitudeView = (TextView) findViewById(R.id.textLatitudeView);
         TextView textLongitudeView = (TextView) findViewById(R.id.textLongitudeView);
-        textLatitudeView.setText((mLatitude));
-        textLongitudeView.setText(mLatitude.toString());
+        textLatitudeView.setText(mLatitude);
+        textLongitudeView.setText(mLongitude);
     }
 }
