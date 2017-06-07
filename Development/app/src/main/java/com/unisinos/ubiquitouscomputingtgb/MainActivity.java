@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements
 
             startActivity(intent);
         } else {
-            Toast.makeText(this, "No permission granted to get location", Toast.LENGTH_LONG);
+            Toast.makeText(this, "No permission granted to get location", Toast.LENGTH_LONG).show();
         }
 
 
