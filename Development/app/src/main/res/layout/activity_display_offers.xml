@@ -12,19 +12,6 @@
     android:paddingTop="2px"
     tools:context="com.unisinos.ubiquitouscomputingtgb.DisplayOffersActivity" >
 
-    <TextView
-        android:id="@+id/textLatitudeView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center" />
-
-    <TextView
-        android:id="@+id/textLongitudeView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center" />
-
-
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
@@ -32,7 +19,6 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" >
     </ListView>
-
 
 </LinearLayout>
 

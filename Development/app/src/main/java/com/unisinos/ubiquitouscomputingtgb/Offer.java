@@ -1,13 +1,15 @@
 package com.unisinos.ubiquitouscomputingtgb;
 
-public class Offer {
+import java.io.Serializable;
+
+public class Offer implements Serializable{
 
     int id;
     String offer;
     String description;
     Double latitude;
     Double longitude;
-    Double distanceToUser;
+    float distanceToUser;
     Double price;
     String url;
     String dealer;
@@ -72,11 +74,11 @@ public class Offer {
         this.longitude = longitude;
     }
 
-    public Double getDistanceToUser() {
+    public float getDistanceToUser() {
         return distanceToUser;
     }
 
-    public void setDistanceToUser(Double distanceToUser) {
+    public void setDistanceToUser(float distanceToUser) {
         this.distanceToUser = distanceToUser;
     }
 

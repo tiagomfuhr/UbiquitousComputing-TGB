@@ -75,8 +75,6 @@ public class MainActivity extends AppCompatActivity implements
         } else {
             Toast.makeText(this, "No permission granted to get location", Toast.LENGTH_LONG).show();
         }
-
-
     }
 
     @Override
@@ -118,11 +116,19 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     private void insertEntriesToDB() {
-        dbHandler.addOffer(new Offer("Pizza com borda", "Pizza de vários sabores com borda de graça e refrigerante", "piemonte.com.br", -29.7848386, -51.1533123, 32.45, "Piemonte", "Food"));
-        dbHandler.addOffer(new Offer("Pizza sem borda", "Pizza de vários sabores sem borda de graça e refrigerante", "piemonte.com.br", -29.7848386, -51.1533123, 28.79, "Piemonte", "Food"));
-        dbHandler.addOffer(new Offer("Troca de pneus", "Traga seus pneus e nós realizamos a troca de graça", "zedaborracharia.com.br", -29.7767882, -51.1741269, 0.0, "Ze da Borracharia", "Services"));
-        dbHandler.addOffer(new Offer("Futebol sete hora", "Venha jogar na Sun7, de segunda a quinta, das 17h as 23h", "sun7premium.com", -29.8710627, -51.1684239, 110.0, "Sun7", "Entertainment"));
-        dbHandler.addOffer(new Offer("Bicicleta aro 20", "Bicicleta Caloi aro 20 pouco usada", "", -30.0427254, -51.2292825, 635.0, "João Alberto", "Used Goods"));
+        dbHandler.addOffer(new Offer("Pizza com borda", "Pizza de vários sabores com borda de graça e refrigerante", "http://piemonte.com.br", -29.773993, -51.153323, 32.45, "Piemonte", "Food"));
+        dbHandler.addOffer(new Offer("Pizza sem borda", "Pizza de vários sabores sem borda de graça e refrigerante", "http://piemonte.com.br", -29.773993, -51.153323, 28.79, "Piemonte", "Food"));
+        dbHandler.addOffer(new Offer("Troca de pneus", "Traga seus pneus e nós realizamos a troca de graça", "http://zedaborracharia.com.br", -29.771183, -51.135256, 0.0, "Ze da Borracharia", "Services"));
+        dbHandler.addOffer(new Offer("Futebol sete hora", "Venha jogar na Sun7, de segunda a quinta, das 17h as 23h", "http://sun7premium.com", -29.844436, -51.150095, 110.0, "Sun7", "Entertainment"));
+        dbHandler.addOffer(new Offer("Bicicleta aro 20", "Bicicleta Caloi aro 20 pouco usada", "http://olx.com.br/caloi-aro-20", -30.0427254, -51.2292825, 635.0, "João Alberto", "Used Goods"));
+        dbHandler.addOffer(new Offer("Buffer Livre Sushi 1 pessoa", "Buffet livre de sushi no Bamboo para 1 pessoa, valido de terças a sextas", "http://www.bamboosushihouse.com.br/", -30.044002, -51.187666, 39.90, "Bamboo Sushi House", "Food"));
+        dbHandler.addOffer(new Offer("Buffet Livre Sushi 2 pessoas", "Buffet livre de sushi no Bamboo para 1 pessoa, valido de terças a sextas", "http://www.bamboosushihouse.com.br/", -30.044002, -51.187666, 39.90, "Bamboo Sushi House", "Food"));
+        dbHandler.addOffer(new Offer("Rodizio de churrasco até 4 pessoas", "Rodízio de churrasco, pratos quentes, saladas e sobremesa para 1, 2 ou 4 pessoas na Churrascaria Arizona - Partenon", "https://www.facebook.com/ChurrascariaArizona?rf=200487800048225", -30.065365, -51.154663, 27.00, "Churrascaria Arizona", "Food"));
+        dbHandler.addOffer(new Offer("Porção de Tapas + Chope Artesanal", "Porção de tapas (8 unidades) + 2 chopes artesanais de 300 ml", "http://www.lacuevaflamencocaxias.com.br", -29.170016, -51.193267, 24.90, "La Cueva Gastronomia y Arte", "Food"));
+        dbHandler.addOffer(new Offer("Visita Design de Sombrancelhas", "Design de sobrancelhas: tem como objetivo corrigir e desenhar o formato das sobrancelhas", "http://www.aluzestetica.com.br/", -30.030923, -51.228354, 29.90, "A luz estetica", "Beauty and Health"));
+        dbHandler.addOffer(new Offer("Serra Verde Express", "passeio de trem com pôr do sol turístico para 1 pessoa", "http://serraverdeexpress.com.br/", -25.436594, -49.257297, 129.90, "Serra Verde", "Entertainment"));
+        dbHandler.addOffer(new Offer("Paintball hora", "Hora no paintball para 10 pessoas", "http://paintball.com.br", -29.677253, -51.117805, 160.90, "Ruinas paintball", "Entertainment"));
+
     }
 
 }

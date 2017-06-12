@@ -30,15 +30,16 @@
 
         <EditText
             android:id="@+id/rangeText"
-            android:layout_width="279dp"
+            android:layout_width="96dp"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:layout_marginTop="20dp"
+            android:ems="10"
             android:hint="Km"
             android:inputType="number"
+            android:text="5"
+            android:textAlignment="center"
             tools:layout_editor_absoluteX="53dp"
-            tools:layout_editor_absoluteY="58dp"
-            android:layout_weight="0.24" />
+            tools:layout_editor_absoluteY="58dp" />
 
         <Button
             android:id="@+id/button"

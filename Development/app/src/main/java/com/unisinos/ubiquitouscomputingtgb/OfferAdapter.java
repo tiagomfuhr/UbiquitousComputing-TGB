@@ -55,8 +55,10 @@ class OfferAdapter extends BaseAdapter{
         textDealer.setText(offer.getDealer());
         textPrice.setText("U$ " + String.valueOf(offer.getPrice()));
         textOfferType.setText(offer.getOfferType());
-        textDistance.setText(String.valueOf(offer.getDistanceToUser()) + " meters");
+        textDistance.setText(String.valueOf((int)offer.getDistanceToUser()) + " meters");
 
         return convertView;
     }
+
+
 }

@@ -1,42 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/textOffer"
-        android:paddingTop="2dip"
+        android:textColor="@color/wallet_holo_blue_light"
+        android:textSize="48px"
+        android:paddingTop="4dip"
         android:paddingBottom="3dip"
+        android:paddingLeft="5dip"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/textDealer"
         android:paddingTop="2dip"
         android:paddingBottom="3dip"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:paddingLeft="5dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textOffer"
+        android:layout_alignParentLeft="true"/>
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/textPrice"
         android:paddingTop="2dip"
         android:paddingBottom="3dip"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textOffer"
+        android:layout_alignParentRight="true"/>
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/textOfferType"
         android:paddingTop="2dip"
         android:paddingBottom="3dip"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:paddingLeft="5dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textDealer"
+        android:layout_alignParentLeft="true"/>
 
     <TextView
         android:id="@+id/textDistance"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="3dip"
-        android:paddingTop="2dip" />
+        android:paddingTop="2dip"
+        android:layout_below="@id/textPrice"
+        android:layout_alignParentRight="true"/>
 
-</LinearLayout>
+</RelativeLayout>

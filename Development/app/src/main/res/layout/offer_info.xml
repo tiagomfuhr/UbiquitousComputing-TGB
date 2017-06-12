@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.unisinos.ubiquitouscomputingtgb.OfferInfoActivity"
+    android:id="@+id/relative_offer_info_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5px"
+    android:paddingLeft="5px"
+    android:paddingRight="5px"
+    android:paddingTop="2px">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textOffer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="3dip"
+        android:paddingLeft="5dip"
+        android:paddingTop="4dip"
+        android:text="Offer"
+        android:textColor="@color/wallet_holo_blue_light"
+        android:textSize="48px" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textDealer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/textOffer"
+        android:paddingBottom="3dip"
+        android:paddingLeft="5dip"
+        android:paddingTop="2dip"
+        android:text="Dealer" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/textOffer"
+        android:paddingBottom="3dip"
+        android:paddingTop="2dip"
+        android:text="Prce" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textOfferType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/textDealer"
+        android:paddingBottom="3dip"
+        android:paddingLeft="5dip"
+        android:paddingTop="2dip"
+        android:text="OfferType" />
+
+    <TextView
+        android:id="@+id/textDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/textPrice"
+        android:paddingBottom="3dip"
+        android:paddingTop="2dip"
+        android:text="Distance" />
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textOfferType"
+        android:paddingBottom="3dip"
+        android:paddingTop="2dip"
+        android:text="Description" />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:weightSum = "2">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="View Website"
+            android:layout_weight="1"
+            android:onClick="OpenWebsite"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="View in Maps"
+            android:layout_weight="1"
+            android:onClick="GetLocationAndOpenGoogleMaps"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
